@@ -1,0 +1,405 @@
+/* -------------------------------------------- */
+/* HTML Body Start */
+:root {
+  --black: #121212;
+  --white: #fffffe;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  border: none;
+  list-style: none;
+  color: currentColor;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: linear-gradient(to top left, #121212, blueviolet 80%, blue);
+}
+
+html,
+body {
+  width: 100%;
+}
+
+.base {
+  padding: 0.75rem;
+  margin: 2rem 1.5rem;
+}
+
+p {
+  color: var(--black);
+}
+
+/* -------------------------------------------- */
+
+@media only screen and (min-width: 480px) {
+  p {
+    font-size: 1.125rem;
+  }
+}
+
+/* @media only screen and (max-width: 480px) {
+  * {
+    cursor: text;
+  }
+  .card-img-top {
+    width: 40%;
+  }
+} */
+
+/* HTML Body End */
+/* -------------------------------------------- */
+/* Header Start */
+
+.header {
+  top: 0;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  position: sticky;
+  font-weight: 700;
+  padding: 0.75rem 0;
+  align-items: baseline;
+  background: #ffffff20;
+  justify-content: space-between;
+  backdrop-filter: var(--backdrop-filter);
+  --backdrop-filter: blur(1rem) saturate(180%);
+  -webkit-backdrop-filter: var(--backdrop-filter);
+  box-shadow: 0 1rem 1rem #12121220, inset 0 -1rem 1rem #ffffff20;
+}
+
+/* -------------------------------------------- */
+
+.header .navbar-brand {
+  padding: 0.75rem 0;
+}
+
+.navbar-brand .logo {
+  padding-left: 0.75rem;
+}
+
+/* -------------------------------------------- */
+
+.header .navbar {}
+
+.navbar .navbar-nav {
+  display: flex;
+}
+
+.navbar .nav-item {
+  cursor: pointer;
+  margin: 0 0.1rem;
+  padding: 0.75rem;
+  transition: all 0.3s;
+  border-radius: 0.75rem;
+  border-top: 1px solid #ffffff00;
+  border-left: 1px solid #ffffff00;
+}
+
+.navbar .nav-item:hover {
+  background-color: #ffffff20;
+  border-top: 1px solid #ffffff20;
+  border-left: 1px solid #ffffff20;
+  backdrop-filter: var(--backdrop-filter);
+  --backdrop-filter: blur(1rem) saturate(180%);
+  -webkit-backdrop-filter: var(--backdrop-filter);
+}
+
+.navbar .nav-link {
+  color: #121212;
+  transition: all 0.3s;
+}
+
+.navbar .nav-item:hover .nav-link {
+  color: #121212;
+}
+
+/* -------------------------------------------- */
+
+.header .btn-group {
+  display: flex;
+  justify-content: flex-;
+}
+
+.btn-group .nav-btn {
+  width: 6rem;
+  border: none;
+  display: flex;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.75rem;
+  margin: 0 0.75rem;
+  margin-left: 0;
+  align-items: center;
+  border-radius: 0.75rem;
+  justify-content: center;
+  transition: all 0.3s ease;
+  background-color: #ffffff20;
+  border-top: 1px solid #ffffff20;
+  border-left: 1px solid #ffffff20;
+  backdrop-filter: var(--backdrop-filter);
+  --backdrop-filter: blur(1rem) saturate(180%);
+  -webkit-backdrop-filter: var(--backdrop-filter);
+}
+
+.btn-group .nav-btn:hover {
+  font-size: 1rem;
+  background: #ffffff80;
+}
+
+/* -------------------------------------------- */
+
+@media only screen and (max-width: 480px) {
+  .btn-group .nav-btn:nth-child(2) {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 857px) {
+  .header .navbar {
+    display: none;
+  }
+}
+
+/* Header End */
+/* -------------------------------------------- */
+/* Card-Group Start */
+
+.card-group {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* margin: 1.125rem 0; */
+}
+
+.card {
+  gap: 0.75rem;
+  display: flex;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  flex-direction: column;
+  background-color: #fffffe40;
+  border: 1px solid #fffffe40;
+  border-top: 1px solid #ffffff20;
+  border-bottom: 1px solid #ffffff20;
+  backdrop-filter: var(--backdrop-filter);
+  --backdrop-filter: blur(1rem) saturate(180%);
+  -webkit-backdrop-filter: var(--backdrop-filter);
+
+  box-shadow: 0 1px 2px #12121230, inset 1px 2px 3px #fffffe40;
+}
+
+/* -------------------------------------------- */
+
+.card .figure {
+  cursor: pointer;
+  display: flex;
+  margin-top: 0.75rem;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(3px 3px 3px #121212);
+}
+
+.card .figure .card-img-top {
+  transition: all 0.3s ease-in;
+}
+
+.card .figure:hover .card-img-top {
+  scale: 1.1;
+  filter: saturate(180%);
+}
+
+hr {
+  display: none;
+}
+
+/* -------------------------------------------- */
+
+.card .card-body {
+  display: flex;
+  padding: 0.75rem;
+  flex-direction: column;
+}
+
+.card-body .card-title {
+  font-size: 1.5rem;
+  margin: 0.75rem 0;
+}
+
+.card-body .card-text {
+  margin: 0.75rem 0;
+  color: #444444;
+  letter-spacing: 1px;
+}
+
+/* -------------------------------------------- */
+
+.card-body .details {}
+
+.card-body .detail-item {
+  font-size: 1.125rem;
+}
+
+.card-body .detail-item .value {
+  font-weight: bold;
+}
+
+/* -------------------------------------------- */
+
+.card-body .btn-group {
+  display: flex;
+  justify-content: center;
+}
+
+.card-body .card-link {
+  color: #121212;
+  font-weight: bold;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+  background-color: #fffffe20;
+}
+
+.card-body .card-link:hover {
+  background-color: #fffffe40;
+}
+
+/* Card-Group End */
+/* -------------------------------------------- */
+/* Footer Start */
+
+.footer {
+  margin-top: 0.75rem;
+}
+
+/* -------------------------------------------- */
+/* Footer: Container */
+
+.footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.footer .container .row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+  border-radius: 1rem 1rem 0 0;
+  justify-content: space-evenly;
+  background-color: #ffffff20;
+  border-top: 1px solid #ffffff20;
+  border-bottom: 1px solid #ffffff20;
+  backdrop-filter: var(--backdrop-filter);
+  --backdrop-filter: blur(1rem) saturate(180%);
+  -webkit-backdrop-filter: var(--backdrop-filter);
+  box-shadow: 0 -1rem 1rem #ffffff20, inset 0 1rem 1rem #ffffff20;
+  /* background-image: linear-gradient(to top left, #121212, #444444); */
+}
+
+.footer .container .row .col {
+  gap: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1.125rem;
+  flex-direction: column;
+}
+
+.footer .container .row .col .footer-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer .container .row .col .footer-menu .footer-item {
+  margin: 0.75rem 0;
+}
+
+.footer .container .row .col .footer-menu .footer-item .footer-link {
+  padding: 0.75rem;
+  color: #cccccc;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.footer .container .row .col .footer-menu .footer-item .footer-link:hover {
+  color: #ffffff;
+  border: 1px solid;
+}
+
+@media only screen and (max-width: 480px) {
+  .footer .container .row {
+    flex-direction: column;
+  }
+}
+
+/* -------------------------------------------- */
+/* Footer: Footer-row */
+
+.footer-row {
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  color: #ffffff;
+  padding: 0.75rem 0;
+  background: #ffffff20;
+  border-top: 1px solid #ffffff20;
+  border-bottom: 1px solid #ffffff20;
+  backdrop-filter: var(--backdrop-filter);
+  --backdrop-filter: blur(1rem) saturate(180%);
+  -webkit-backdrop-filter: var(--backdrop-filter);
+  box-shadow: 0 -1rem 1rem #12121220, inset 0 1rem 1rem #ffffff20;
+}
+
+.footer-row .footer-content {
+  display: flex;
+  align-items: center;
+  margin: 0.75rem auto;
+  justify-content: center;
+}
+
+.footer-row .copyright {
+  font-size: 14px;
+  color: #ffffff;
+  margin: 0 0.75rem;
+  text-align: center;
+}
+
+.footer-row .footer-menu {
+  display: flex;
+  margin: 0.75rem auto;
+}
+
+.footer-row .footer-menu .footer-item {
+  margin: 0 0.75rem;
+  font-size: 0.875rem;
+}
+
+.footer-row .footer-menu .footer-item .footer-link {
+  color: currentColor;
+}
+
+@media only screen and (max-width: 660px) {
+  .footer-row .footer-content {
+    order: 1;
+  }
+
+  .footer-row .footer-menu {
+    order: 0;
+  }
+}
+
+/* Footer  */
+/* -------------------------------------------- */

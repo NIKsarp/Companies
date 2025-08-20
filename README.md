@@ -1,0 +1,1 @@
+This is basic UI for company info website.
