@@ -47,9 +47,9 @@ const card = (src, alt, title, text, valueName, valueName2, href) => {
   article.className = `card`;
   figure.className = `figure`;
   img.className = `figure-img`;
-  div.className = `card-body`;
-  h5.className = `card-title`;
-  p.className = `card-text`;
+  div.className = `card__body`;
+  h5.className = `card__title`;
+  p.className = `card__text`;
 
   section.className = `details`;
   innerDiv.className = `detail-item`;
@@ -59,7 +59,7 @@ const card = (src, alt, title, text, valueName, valueName2, href) => {
   key2.className = `key2`;
   value2.className = `value2`;
   btnGroup.className = `btn-group`;
-  a.className = `card-link`;
+  a.className = `card__link`;
 
   // APPEND ELEMENTS
   article.append(figure, div);
